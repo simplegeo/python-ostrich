@@ -15,6 +15,9 @@ class Timing(object):
         self.lock = threading.Lock()
     
     def clear(self):
+        """Resets the state of this Timing. Clears the durations and counts
+        collected so far.
+        """
         with self.lock:
             self.max = 0
             self.min = sys.maxint
@@ -28,6 +31,7 @@ class Timing(object):
             return self.add_duration(n)
     
     def add_duration(self, n):
+        """Adds a duration to our current Timing."""
         with self.lock:
             if n > -1:
                 self.max = max(self.max, n)
@@ -47,6 +51,7 @@ class Timing(object):
             return self.count
     
     def add_timing_stat(self, timing_stat):
+        """Add a summarized set of timings."""
         with self.lock:
             if timing_stat.count > 0:
                 # (comment from Scala ostrich) these equations end up using the sum again, and may be lossy. i couldn't find or think of
@@ -63,6 +68,7 @@ class Timing(object):
                     self.histogram.merge(timing_stat.histogram)
     
     def get(self, reset=False):
+        """Returns a TimingStat for the measured event."""
         with self.lock:
             try:
                 return TimingStat(self.count, self.max, self.min, self.mean, self.partial_variance, self.histogram.clone())
@@ -93,6 +99,17 @@ class TimingStat(object):
     def __eq__(self, other):
         return self.count == other.count and self.max == other.max and \
                self.min == other.min and self.average == other.average and self.variance == other.variance
+
+    def to_raw_dict(self, histogram=False):
+        d = dict(count=self.count, max=self.max, min=self.min,
+                 mean=self.mean, partial_variance=self.partial_variance)
+        if histogram and self.histogram:
+            # strip off all the zeros at the end of the histogram
+            histogram = list(self.histogram.buckets)
+            while histogram and histogram[-1] == 0:
+                histogram = histogram[:-1]
+            d['histogram'] = histogram
+        return d
     
     def to_dict_no_histogram(self):
         return dict(count=self.count, maximum=self.max, minimum=self.min,
@@ -116,6 +133,10 @@ class TimingStat(object):
                     histogram = histogram[:-1]
                 d.update(histogram=histogram)
         return d
+
+    @classmethod
+    def from_raw_dict(cls, d):
+        return TimingStat(d['count'], d['maximum'], d['minimum'], d['average'], d['partial_variance'])
 
     def __repr__(self):
         return self.__str__()
