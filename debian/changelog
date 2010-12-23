@@ -1,3 +1,14 @@
+python-ostrich (0.2.7-sg31) lucid; urgency=low
+
+  [ Wade Simmons ]
+  * make thread safe
+  * 0.3.0
+  * remove thread safety warning from README
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Thu, 23 Dec 2010 19:02:03 +0000
+
 python-ostrich (0.2.7-sg29) lucid; urgency=low
 
   * UNRELEASED
