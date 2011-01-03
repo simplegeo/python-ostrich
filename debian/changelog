@@ -1,3 +1,13 @@
+python-ostrich (0.3.1-sg35) lucid; urgency=low
+
+  [ Wade Simmons ]
+  * return empty TimingStats objects in the graph_data endpoint when
+    there is missing data
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Mon, 03 Jan 2011 17:57:44 +0000
+
 python-ostrich (0.3.1-sg33) lucid; urgency=low
 
   * UNRELEASED
