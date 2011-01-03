@@ -1,3 +1,12 @@
+python-ostrich (0.3.1-sg37) lucid; urgency=low
+
+  [ Wade Simmons ]
+  * include histogram entries for empty timing values
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Mon, 03 Jan 2011 18:23:12 +0000
+
 python-ostrich (0.3.1-sg36) lucid; urgency=low
 
   [ Wade Simmons ]
