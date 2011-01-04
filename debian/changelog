@@ -1,3 +1,12 @@
+python-ostrich (0.3.1-sg38) lucid; urgency=low
+
+  [ Wade Simmons ]
+  * fix TimingStat.from_raw_dict
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Tue, 04 Jan 2011 22:44:10 +0000
+
 python-ostrich (0.3.1-sg37) lucid; urgency=low
 
   [ Wade Simmons ]
