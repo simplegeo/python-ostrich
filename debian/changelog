@@ -1,3 +1,9 @@
+python-ostrich (0.3.4-sg42) lucid; urgency=low
+
+  * UNRELEASED
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Tue, 18 Jan 2011 00:46:53 +0000
+
 python-ostrich (0.3.4-sg0) lucid; urgency=low
 
   * New upstream release
