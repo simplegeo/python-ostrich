@@ -17,17 +17,18 @@ trove_classifiers=[
     ]
 
 setup(name="ostrich",
-      version="0.3.5",
+      version="0.3.6",
       description="Python port of the Scala Ostrich library",
       author="Wade Simmons",
       author_email="wade@wades.im",
       url="http://github.com/wadey/python-ostrich",
       py_modules=['ostrich'],
       packages = find_packages(),
-      test_suite="ostrich.test",
+      test_suite="nose.collector",
       license = "Apache 2.0",
       keywords="ostrich",
-      install_requires=['decorator', 'Twisted'],
+      setup_requires=['nose', 'setuptools_pyflakes'],
+      install_requires=['decorator'],
       tests_require=['coverage', 'nose', 'mock'],
       classifiers=trove_classifiers,
       zip_safe = True)
