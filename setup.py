@@ -17,7 +17,7 @@ trove_classifiers=[
     ]
 
 setup(name="ostrich",
-      version="0.3.6",
+      version="0.3.7",
       description="Python port of the Scala Ostrich library",
       author="Wade Simmons",
       author_email="wade@wades.im",
@@ -27,7 +27,7 @@ setup(name="ostrich",
       test_suite="nose.collector",
       license = "Apache 2.0",
       keywords="ostrich",
-      setup_requires=['nose', 'setuptools_pyflakes'],
+      setup_requires=['nose'],
       install_requires=['decorator'],
       tests_require=['coverage', 'nose', 'mock'],
       classifiers=trove_classifiers,
