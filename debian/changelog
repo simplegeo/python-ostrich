@@ -1,3 +1,15 @@
+python-ostrich (0.3.6-sg47) maverick; urgency=low
+
+  [ Ian Eure ]
+  * Remove pyflakes dependency.
+
+  [ Wade Simmons ]
+  * 0.3.7
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Fri, 05 Aug 2011 21:08:02 +0000
+
 python-ostrich (0.3.6-sg46) lucid; urgency=low
 
   [ Wade Simmons ]
