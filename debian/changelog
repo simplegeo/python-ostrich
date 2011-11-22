@@ -1,3 +1,9 @@
+python-ostrich (0.3.8-sg0) lucid; urgency=low
+
+  * New upstream release
+
+ -- Wade Simmons <wade@simplegeo.com>  Tue, 22 Nov 2011 15:20:44 -0800
+
 python-ostrich (0.3.7-sg48) maverick; urgency=low
 
   * UNRELEASED
